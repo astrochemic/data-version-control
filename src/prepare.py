@@ -21,7 +21,7 @@ def get_files_and_labels(source_path):
 def save_as_csv(filenames, labels, destination):
     data_dictionary = {"filename": filenames, "label": labels}
     data_frame = pd.DataFrame(data_dictionary)
-    data_frame.to_csv(destination)
+    data_frame.to_csv(destination, index=False)
 
 
 def main(repo_path):
